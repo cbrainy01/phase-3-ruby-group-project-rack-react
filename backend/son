@@ -1,0 +1,14 @@
+=> [32m#<Player:0x000055b999eaa828[0m
+ id: [1;36mnil[0m,
+ name: [31m[1;31m"[0m[31mSon[1;31m"[0m[31m[0m,
+ image: [1;36mnil[0m,
+ position: [31m[1;31m"[0m[31mLW[1;31m"[0m[31m[0m,
+ status: [1;36mnil[0m,
+ goals: [1;36mnil[0m,
+ assists: [1;36mnil[0m,
+ saves: [1;36mnil[0m,
+ league_id: [1;36mnil[0m,
+ fantasy_team_id: [1;36mnil[0m,
+ created_at: [1;36mnil[0m,
+ updated_at: [1;36mnil[0m,
+ endorsement: [1;36mnil[0m[32m>[0m
