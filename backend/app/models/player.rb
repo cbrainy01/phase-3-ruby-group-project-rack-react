@@ -2,8 +2,13 @@ class Player < ActiveRecord::Base
     belongs_to :league
     belongs_to :fantasy_team
 
+
+    def self.assist_masters
+        self.where("assists > 10")
+    end
+
     def goal_involvements
-        self.goals + self.assists
+        self.goals + self.assists 
     end
 
     def self.find_by_path(path)
@@ -15,7 +20,6 @@ class Player < ActiveRecord::Base
         id = path.split("/fantasy_teams")[1].to_i
         self.find_by_id(id)
     end
-
 
     def self.get_all_players
         self.all.map { |player| player.render_player_info }
