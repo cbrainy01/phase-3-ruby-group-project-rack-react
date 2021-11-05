@@ -19,26 +19,6 @@ class Application
         return [ 404, {"Content-Type" => "application/json"}, [ {message: "player wasnt found"}.to_json ] ]
       end
 
-
-    # elsif req.path.match(/fantasy_teams/) && req.patch?  
-    #   team_to_alter = FantasyTeam.find_by_path(req.path)
-    #   team_to_alter.players.where()
-    # #   player_to_alter = Player.find_by_path(req.path)
-    # #     # team = FantasyTeam.get_team_from_path(req.path)
-    # #     # release = FantasyTeam.remove_player_from_team(req.path)
-    # #     # altered_team = FantasyTeam.get_team_from_path(req.path)
-    #   if team_to_alter
-    #     update_data = JSON.parse(req.body.read)
-    #       if player_to_alter.update(update_data)
-    #       return [ 200, {"Content-Type" => "application/json"}, [ {message: "player and team updated", fantasy_team: altered_team, player: player_to_alter}.to_json ] ]
-    #     elsif
-    #       return [ 422, {"Content-Type" => "application/json"}, [ {message: "data not valid"}.to_json ] ]
-    #     end 
-    #   else 
-    #     return [ 404, {"Content-Type" => "application/json"}, [ {message: "player wasnt found"}.to_json ] ]
-    #   end
-
-
     elsif req.path.match(/fantasy_teams/) && req.delete?
       team_to_delete = FantasyTeam.find_by_path(req.path)
       # if the team to delete is found, its destroyed with the "team_to_delete.destroy" part
